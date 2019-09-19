@@ -6,7 +6,8 @@
 <!-- badges: start -->
 
 ![](http://img.shields.io/badge/cool-useless-green.svg)
-![](http://img.shields.io/badge/mini-verse-blue.svg)
+![](http://img.shields.io/badge/mini-verse-blue.svg) [![Travis build
+status](https://travis-ci.org/coolbutuseless/minihtml.svg?branch=master)](https://travis-ci.org/coolbutuseless/minihtml)
 <!-- badges: end -->
 
 `minihtml` is a package for building html documents in R.
