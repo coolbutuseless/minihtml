@@ -78,8 +78,30 @@ assist in writing the code:
   - `$new(name, ...)`, `$update(...)` and `$add(name, ...)` all accept
     `...` where
       - **named arguments** are added as *attributes* of this node
-      - **unnamed argument** are added as *children* of this
-node
+      - **unnamed argument** are added as *children* of this node
+
+## Parsing HTML text into a `minihtml` document
+
+`minihtml` uses `xml2` to parse HTML text (or file) into a `minihtml`
+document.
+
+``` r
+my_html <- "<p>Par contents</p>"
+elem <- minihtml::parse_html_elem(my_html)
+elem$update(width = "100px")$
+  add(name = 'span', 'inner contents')
+
+cat(as.character(elem))
+```
+
+``` 
+   <p width="100px">
+     Par contents
+     <span>
+       inner contents
+     </span>
+   </p>
+```
 
 ## All-in-one example
 

@@ -1,7 +1,7 @@
 Package: minihtml
 Type: Package
 Title: HTML Builder
-Version: 0.1.0
+Version: 0.1.1
 Author: mikefc
 Maintainer: mikefc <mikefc@gmail.com>
 Description: HTML Builder.
@@ -15,5 +15,6 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    shiny
+    shiny,
+    xml2
 VignetteBuilder: knitr

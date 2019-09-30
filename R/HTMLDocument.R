@@ -18,8 +18,8 @@ HTMLDocument <- R6::R6Class(
 
   public = list(
 
-    initialize = function(...) {
-      super$initialize(name = 'html', ...)
+    initialize = function(..., name = 'html') {
+      super$initialize(name = name, ...)
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
