@@ -28,7 +28,8 @@ only tested in MacOS and Rstudio
 \item \href{#method-show}{\code{HTMLDocument$show()}}
 }
 }
-\if{html}{\subsection{Inherited methods}{
+\if{html}{
+\out{<details ><summary>Inherited methods</summary>}
 \itemize{
 \item \href{../../minihtml/html/HTMLElement.html#method-a}{\code{minihtml::HTMLElement$a()}}
 \item \href{../../minihtml/html/HTMLElement.html#method-abbr}{\code{minihtml::HTMLElement$abbr()}}
@@ -150,7 +151,8 @@ only tested in MacOS and Rstudio
 \item \href{../../minihtml/html/HTMLElement.html#method-video}{\code{minihtml::HTMLElement$video()}}
 \item \href{../../minihtml/html/HTMLElement.html#method-wbr}{\code{minihtml::HTMLElement$wbr()}}
 }
-}}
+\out{</details>}
+}
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
 \subsection{Method \code{new()}}{
