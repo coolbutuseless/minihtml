@@ -57,37 +57,8 @@ attesc <- function(x) {
 #'
 #' }
 #'
-#' @usage NULL
-#' @format NULL
-#'
-#' @section Methods:
-#'
-#' \describe{
-#'
-#'
-#'
-#' \item{\code{$new(name, ...)}}{
-#' Create a new \code{HTMLElement} with the given name. Extra named arguments
-#' are treated as tag attributes, and unnamed arguments are considered child
-#' nodes.
-#' \tabular{ll}{
-#'   \code{name} \tab name of html tag to create \cr
-#'   \code{...} \tab attribute name/value pairs, and child nodes \cr
-#' }
-#' }
-#'
 #'
 #' \item{\code{$update(...)}}{
-#' Updates the attributes and children.
-#'
-#' Named arguments are considered attributes and will overwrite
-#' existing attributes with the same name. Set to NULL to delete the attribute.
-#' Set to NA to make this a bare attribute without a value.
-#'
-#' Unnamed arguments are appended to the list of child nodes.  These
-#' should be text, other HTMLElements or any ojbect that can be represented
-#' as a single text string using "as.character()".  To be specific about
-#' where in the child list a node will be placed, use \code{$append()}
 #' \tabular{ll}{
 #'   \code{...} \tab attribute name/value pairs, and child nodes \cr
 #' }
@@ -158,10 +129,21 @@ HTMLElement <- R6::R6Class(
 
   public = list(
 
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #' @field name name of node e.g. "div"
+    #' @field attribs named list of attributes of this node
+    #' @field children list of immediate children of this node
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     name     = NULL,
     attribs  = NULL,
     children = NULL,
 
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #' @description Initialise HTMLElement
+    #' @param ... Further arguments are attributes and children of this node. See \code{HTMLElement$update()}
+    #' @param name name of node. e.g. "div"
+    #' @return self
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     initialize = function(name, ...) {
       self$name     <- name
       self$attribs  <- list()
@@ -177,13 +159,20 @@ HTMLElement <- R6::R6Class(
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Update the HTML Element.
-    #   - Named arguments are considered attributes and will overwrite
-    #     existing attributes with the same name. Set to NULL to delete the attribute
-    #   - Unnamed arguments are appended to the list of child nodes.  These
-    #     should be text, other HTMLElements or any ojbect that can be represented
-    #     as a single text string using "as.character()"
-    #   - to print just the attribute name, but without a value, set to NA
+    #' @description Updates the attributes and children.
+    #'
+    #' @details
+    #' Named arguments are considered attributes and will overwrite
+    #' existing attributes with the same name. Set to NULL to delete the attribute.
+    #' Set to NA to make this a bare attribute without a value.
+    #'
+    #' Unnamed arguments are appended to the list of child nodes.  These
+    #' should be text, other HTMLElements or any ojbect that can be represented
+    #' as a single text string using "as.character()".  To be specific about
+    #' where in the child list a node will be placed, use \code{$append()}
+    #'
+    #' @param ... attributes and children to add to this node
+    #' @return self
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     update = function(...) {
       varargs      <- list(...)
@@ -204,8 +193,10 @@ HTMLElement <- R6::R6Class(
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Insert a child node. by default at the end of the list of children nodes
-    # but 'position' argument can be used to set location
+    #' @description Append a child node at the specified position
+    #' @param position by default at the end of the list of children nodes
+    #'        can be used to set location index
+    #' @return self
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     append = function(..., position = NULL) {
       child_objects <- list(...)
@@ -219,8 +210,11 @@ HTMLElement <- R6::R6Class(
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # create an HTML element and add it to the document. return the newly
-    # created element
+    #' @description Simultaneous create an HTML element and add it as a child node
+    #' @param name name of node to create
+    #' @param ... attributes and children of this newly created node
+    #' @return In contrast to most other methods, \code{$add()} returns
+    #' the newly created element, \emph{not} the document
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     add = function(name, ...) {
       if (!is.character(name)) {
@@ -233,7 +227,9 @@ HTMLElement <- R6::R6Class(
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Remove child objects at the given indicies
+    #' @description Remove child objects at the given indicies
+    #'
+    #' @param indicies indicies of the children to remove
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     remove = function(indicies) {
       self$children[indices] <- NULL
@@ -242,7 +238,10 @@ HTMLElement <- R6::R6Class(
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Recursively convert this XMLElement and children to text and concatenate
+    #' @description  Recursively convert this HTMLElement and children to text
+    #' @param ... ignored
+    #' @param depth recursion depth
+    #' @return single character string
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     as_character_inner = function(..., depth = 0) {
       indent1   <- create_indent(depth)
@@ -304,7 +303,11 @@ HTMLElement <- R6::R6Class(
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Recursively convert this XMLElement and children to text and concatenate
+    #' @description Recursively convert this HTMLElement and children to text
+    #' @param ... ignored
+    #' @param depth recursion depth. default: 0
+    #' @param include_declaration Include the leading XML declaration? default: FALSE
+    #' @return single character string
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     as_character = function(..., depth = 0, include_declaration = FALSE) {
       html_string <- paste0(self$as_character_inner(depth = depth), collapse = "\n")
@@ -320,7 +323,9 @@ HTMLElement <- R6::R6Class(
 
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Print the HTML string
+    #' @description Print the HTML string to the terminal
+    #' @param ... Extra arguments passed to \code{HTMLElement$as_character()}
+    #' @param include_declaration Include \code{DOCTYPE} declaration? default: FALSE
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     print = function(..., include_declaration = FALSE) {
       cat(self$as_character(..., include_declaration = include_declaration))
@@ -328,7 +333,10 @@ HTMLElement <- R6::R6Class(
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Save HTML fragment
+    #' @description Save HTML
+    #' @param filename filename
+    #' @param include_declaration Include \code{DOCTYPE} declaration? default: FALSE
+    #' @param ... Extra arguments passed to \code{HTMLElement$as_character()}
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     save = function(filename, include_declaration = FALSE, ...) {
       writeLines(self$as_character(..., include_declaration = include_declaration), filename)
@@ -336,7 +344,7 @@ HTMLElement <- R6::R6Class(
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Deep copy needed as 'styles' is a list of R6 objects
+    #' @description Make a deep copy of this node and its children
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     copy = function() {
       self$clone(deep = TRUE)

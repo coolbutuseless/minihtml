@@ -18,33 +18,52 @@ HTMLDocument <- R6::R6Class(
 
   public = list(
 
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    #' @description Initialise HTMLDocument
+    #' @param ... Further arguments passed to \code{HTMLElement$new()}
+    #' @param name name of node. default: 'html'
+    #' @return self
+    #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     initialize = function(..., name = 'html') {
       super$initialize(name = name, ...)
+      invisible(self)
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Save HTML fragment
+    #' @description Save HTML fragment
+    #' @param filename filename
+    #' @param include_declaration Include \code{DOCTYPE} declaration? default: TRUE
+    #' @param ... Further arguments passed to \code{HTMLElement$save()}
+    #' @return self
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     save = function(filename, include_declaration = TRUE, ...) {
       super$save(filename, include_declaration = include_declaration)
+      invisible(self)
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # Print
+    #' @description Print HTMLDocument
+    #' @param include_declaration Include \code{DOCTYPE} declaration? default: TRUE
+    #' @return self
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     print = function(include_declaration = TRUE) {
       super$print(include_declaration = include_declaration)
+      invisible(self)
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # As character
+    #' @description Convert to character representation
+    #' @param include_declaration Include \code{DOCTYPE} declaration? default: TRUE
+    #' @return single character string representing the HTML
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     as_character = function(include_declaration = TRUE) {
       super$as_character(include_declaration = include_declaration)
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    # View HTML in whatever viewer is available
+    #' @descriptiong View HTML in whatever viewer is available
+    #' @details only tested in MacOS and Rstudio
+    #' @param viewer viewer to use
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     show = function(viewer = getOption("viewer", utils::browseURL)) {
       www_dir <- tempfile("viewhtml")

@@ -6,42 +6,15 @@
 \alias{html_elem}
 \title{HTML element builder}
 \description{
+HTML element builder
+
+HTML element builder
+}
+\details{
 It is up to the user to escape text if necessary. See \code{esc()} and \code{attesc()}
 functions to help with this, although if you are working within shiny,
 then this should happen automatically.
-}
-\section{Usage}{
 
-\preformatted{elem <- HTMLElement$new("a", href = "link.html")
-elem <- html_elem('a', href = "link.html")
-
-elem$update(margin = "auto")
-
-new_elem <- elem$copy()
-
-}
-}
-
-\section{Methods}{
-
-
-\describe{
-
-
-
-\item{\code{$new(name, ...)}}{
-Create a new \code{HTMLElement} with the given name. Extra named arguments
-are treated as tag attributes, and unnamed arguments are considered child
-nodes.
-\tabular{ll}{
-  \code{name} \tab name of html tag to create \cr
-  \code{...} \tab attribute name/value pairs, and child nodes \cr
-}
-}
-
-
-\item{\code{$update(...)}}{
-Updates the attributes and children.
 
 Named arguments are considered attributes and will overwrite
 existing attributes with the same name. Set to NULL to delete the attribute.
@@ -51,59 +24,9 @@ Unnamed arguments are appended to the list of child nodes.  These
 should be text, other HTMLElements or any ojbect that can be represented
 as a single text string using "as.character()".  To be specific about
 where in the child list a node will be placed, use \code{$append()}
-\tabular{ll}{
-  \code{...} \tab attribute name/value pairs, and child nodes \cr
 }
-}
-
-
-\item{\code{$append(...)}}{
-Append \code{HTMLElement} objects as children to this element
-\tabular{ll}{
-  \code{...} \tab all arguments treated as HTMLElement objects and added as the children of this element \cr
-}
-}
-
-
-\item{\code{$add(name, ...)}}{
-Create a new \code{HTMLElement} and add it as a  child to this element. Return the
-new element.  \emph{See \code{$new()} for description of arguments.}
-}
-
-\item{\code{$remove(indices)}}{
-Remove \code{HTMLElement} child objects from this element by index.
-\tabular{ll}{
-  \code{indices} \tab indices of HTMLElement objects to remove \cr
-}
-}
-
-\item{\code{$as_character(include_declaration)}}{
-Convert \code{HTMLElement} to a character string.
-\tabular{ll}{
-  \code{include_declaration} \tab Include the leading \code{DOCTYPE} declaration in the output. Defaults to FALSE for \code{HTMLElement} and TRUE for \code{HTMLDocument} \cr
-}
-}
-
-\item{\code{$save(filename, include_declaration)}}{
-Save \code{HTMLElement} to file.
-\tabular{ll}{
-  \code{filename}            \tab filename \cr
-  \code{include_declaration} \tab Include the leading \code{DOCTYPE} declaration in the output. Defaults to FALSE for \code{HTMLElement} and TRUE for \code{HTMLDocument} \cr
-}
-}
-
-\item{\code{$print()}}{
-Print \code{HTMLElement} to terminal.
-\tabular{ll}{
-  \code{include_declaration} \tab Include the leading \code{DOCTYPE} declaration in the output. Defaults to FALSE for \code{HTMLElement} and TRUE for \code{HTMLDocument} \cr
-}
-}
-
-\item{\code{$copy()}}{
-Copy \code{HTMLElement}.
-}
-
-}
+\section{}{
+NA
 }
 
 \examples{
@@ -113,4 +36,1392 @@ HTMLElement$new('div', class = ".big", "DIV contents")
 
 
 }
-\keyword{datasets}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{name}}{name of node e.g. "div"}
+
+\item{\code{attribs}}{named list of attributes of this node}
+
+\item{\code{children}}{list of immediate children of this node}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-a}{\code{HTMLElement$a()}}
+\item \href{#method-abbr}{\code{HTMLElement$abbr()}}
+\item \href{#method-address}{\code{HTMLElement$address()}}
+\item \href{#method-area}{\code{HTMLElement$area()}}
+\item \href{#method-article}{\code{HTMLElement$article()}}
+\item \href{#method-aside}{\code{HTMLElement$aside()}}
+\item \href{#method-audio}{\code{HTMLElement$audio()}}
+\item \href{#method-b}{\code{HTMLElement$b()}}
+\item \href{#method-base}{\code{HTMLElement$base()}}
+\item \href{#method-bdi}{\code{HTMLElement$bdi()}}
+\item \href{#method-bdo}{\code{HTMLElement$bdo()}}
+\item \href{#method-big}{\code{HTMLElement$big()}}
+\item \href{#method-blockquote}{\code{HTMLElement$blockquote()}}
+\item \href{#method-body}{\code{HTMLElement$body()}}
+\item \href{#method-br}{\code{HTMLElement$br()}}
+\item \href{#method-button}{\code{HTMLElement$button()}}
+\item \href{#method-canvas}{\code{HTMLElement$canvas()}}
+\item \href{#method-caption}{\code{HTMLElement$caption()}}
+\item \href{#method-cite}{\code{HTMLElement$cite()}}
+\item \href{#method-code}{\code{HTMLElement$code()}}
+\item \href{#method-col}{\code{HTMLElement$col()}}
+\item \href{#method-colgroup}{\code{HTMLElement$colgroup()}}
+\item \href{#method-command}{\code{HTMLElement$command()}}
+\item \href{#method-datalist}{\code{HTMLElement$datalist()}}
+\item \href{#method-dd}{\code{HTMLElement$dd()}}
+\item \href{#method-del}{\code{HTMLElement$del()}}
+\item \href{#method-details}{\code{HTMLElement$details()}}
+\item \href{#method-dfn}{\code{HTMLElement$dfn()}}
+\item \href{#method-dialog}{\code{HTMLElement$dialog()}}
+\item \href{#method-div}{\code{HTMLElement$div()}}
+\item \href{#method-dl}{\code{HTMLElement$dl()}}
+\item \href{#method-dt}{\code{HTMLElement$dt()}}
+\item \href{#method-em}{\code{HTMLElement$em()}}
+\item \href{#method-embed}{\code{HTMLElement$embed()}}
+\item \href{#method-fieldset}{\code{HTMLElement$fieldset()}}
+\item \href{#method-figcaption}{\code{HTMLElement$figcaption()}}
+\item \href{#method-figure}{\code{HTMLElement$figure()}}
+\item \href{#method-footer}{\code{HTMLElement$footer()}}
+\item \href{#method-form}{\code{HTMLElement$form()}}
+\item \href{#method-h1}{\code{HTMLElement$h1()}}
+\item \href{#method-h2}{\code{HTMLElement$h2()}}
+\item \href{#method-h3}{\code{HTMLElement$h3()}}
+\item \href{#method-h4}{\code{HTMLElement$h4()}}
+\item \href{#method-h5}{\code{HTMLElement$h5()}}
+\item \href{#method-h6}{\code{HTMLElement$h6()}}
+\item \href{#method-head}{\code{HTMLElement$head()}}
+\item \href{#method-header}{\code{HTMLElement$header()}}
+\item \href{#method-hgroup}{\code{HTMLElement$hgroup()}}
+\item \href{#method-hr}{\code{HTMLElement$hr()}}
+\item \href{#method-html}{\code{HTMLElement$html()}}
+\item \href{#method-i}{\code{HTMLElement$i()}}
+\item \href{#method-iframe}{\code{HTMLElement$iframe()}}
+\item \href{#method-ilayer}{\code{HTMLElement$ilayer()}}
+\item \href{#method-img}{\code{HTMLElement$img()}}
+\item \href{#method-input}{\code{HTMLElement$input()}}
+\item \href{#method-ins}{\code{HTMLElement$ins()}}
+\item \href{#method-kbd}{\code{HTMLElement$kbd()}}
+\item \href{#method-keygen}{\code{HTMLElement$keygen()}}
+\item \href{#method-label}{\code{HTMLElement$label()}}
+\item \href{#method-legend}{\code{HTMLElement$legend()}}
+\item \href{#method-li}{\code{HTMLElement$li()}}
+\item \href{#method-link}{\code{HTMLElement$link()}}
+\item \href{#method-main}{\code{HTMLElement$main()}}
+\item \href{#method-map}{\code{HTMLElement$map()}}
+\item \href{#method-mark}{\code{HTMLElement$mark()}}
+\item \href{#method-marquee}{\code{HTMLElement$marquee()}}
+\item \href{#method-menu}{\code{HTMLElement$menu()}}
+\item \href{#method-meta}{\code{HTMLElement$meta()}}
+\item \href{#method-meter}{\code{HTMLElement$meter()}}
+\item \href{#method-nav}{\code{HTMLElement$nav()}}
+\item \href{#method-noscript}{\code{HTMLElement$noscript()}}
+\item \href{#method-object}{\code{HTMLElement$object()}}
+\item \href{#method-ol}{\code{HTMLElement$ol()}}
+\item \href{#method-optgroup}{\code{HTMLElement$optgroup()}}
+\item \href{#method-option}{\code{HTMLElement$option()}}
+\item \href{#method-output}{\code{HTMLElement$output()}}
+\item \href{#method-p}{\code{HTMLElement$p()}}
+\item \href{#method-param}{\code{HTMLElement$param()}}
+\item \href{#method-pre}{\code{HTMLElement$pre()}}
+\item \href{#method-progress}{\code{HTMLElement$progress()}}
+\item \href{#method-q}{\code{HTMLElement$q()}}
+\item \href{#method-rp}{\code{HTMLElement$rp()}}
+\item \href{#method-rt}{\code{HTMLElement$rt()}}
+\item \href{#method-ruby}{\code{HTMLElement$ruby()}}
+\item \href{#method-samp}{\code{HTMLElement$samp()}}
+\item \href{#method-script}{\code{HTMLElement$script()}}
+\item \href{#method-section}{\code{HTMLElement$section()}}
+\item \href{#method-select}{\code{HTMLElement$select()}}
+\item \href{#method-small}{\code{HTMLElement$small()}}
+\item \href{#method-source}{\code{HTMLElement$source()}}
+\item \href{#method-span}{\code{HTMLElement$span()}}
+\item \href{#method-strong}{\code{HTMLElement$strong()}}
+\item \href{#method-style}{\code{HTMLElement$style()}}
+\item \href{#method-sub}{\code{HTMLElement$sub()}}
+\item \href{#method-summary}{\code{HTMLElement$summary()}}
+\item \href{#method-sup}{\code{HTMLElement$sup()}}
+\item \href{#method-table}{\code{HTMLElement$table()}}
+\item \href{#method-tbody}{\code{HTMLElement$tbody()}}
+\item \href{#method-td}{\code{HTMLElement$td()}}
+\item \href{#method-template}{\code{HTMLElement$template()}}
+\item \href{#method-textarea}{\code{HTMLElement$textarea()}}
+\item \href{#method-tfoot}{\code{HTMLElement$tfoot()}}
+\item \href{#method-th}{\code{HTMLElement$th()}}
+\item \href{#method-thead}{\code{HTMLElement$thead()}}
+\item \href{#method-time}{\code{HTMLElement$time()}}
+\item \href{#method-title}{\code{HTMLElement$title()}}
+\item \href{#method-tr}{\code{HTMLElement$tr()}}
+\item \href{#method-track}{\code{HTMLElement$track()}}
+\item \href{#method-tt}{\code{HTMLElement$tt()}}
+\item \href{#method-ul}{\code{HTMLElement$ul()}}
+\item \href{#method-var}{\code{HTMLElement$var()}}
+\item \href{#method-video}{\code{HTMLElement$video()}}
+\item \href{#method-wbr}{\code{HTMLElement$wbr()}}
+\item \href{#method-new}{\code{HTMLElement$new()}}
+\item \href{#method-update}{\code{HTMLElement$update()}}
+\item \href{#method-append}{\code{HTMLElement$append()}}
+\item \href{#method-add}{\code{HTMLElement$add()}}
+\item \href{#method-remove}{\code{HTMLElement$remove()}}
+\item \href{#method-as_character_inner}{\code{HTMLElement$as_character_inner()}}
+\item \href{#method-as_character}{\code{HTMLElement$as_character()}}
+\item \href{#method-print}{\code{HTMLElement$print()}}
+\item \href{#method-save}{\code{HTMLElement$save()}}
+\item \href{#method-copy}{\code{HTMLElement$copy()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-a"></a>}}
+\subsection{Method \code{a()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$a(..., href, hreflang, media, rel, target, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-abbr"></a>}}
+\subsection{Method \code{abbr()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$abbr(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-address"></a>}}
+\subsection{Method \code{address()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$address(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-area"></a>}}
+\subsection{Method \code{area()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$area(
+  ...,
+  alt,
+  coords,
+  href,
+  hreflang,
+  media,
+  rel,
+  shape,
+  target,
+  type
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-article"></a>}}
+\subsection{Method \code{article()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$article(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-aside"></a>}}
+\subsection{Method \code{aside()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$aside(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-audio"></a>}}
+\subsection{Method \code{audio()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$audio(
+  ...,
+  autoplay,
+  controls,
+  loop,
+  mediagroup,
+  muted,
+  preload,
+  src
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-b"></a>}}
+\subsection{Method \code{b()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$b(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-base"></a>}}
+\subsection{Method \code{base()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$base(..., href, target)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-bdi"></a>}}
+\subsection{Method \code{bdi()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$bdi(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-bdo"></a>}}
+\subsection{Method \code{bdo()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$bdo(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-big"></a>}}
+\subsection{Method \code{big()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$big(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-blockquote"></a>}}
+\subsection{Method \code{blockquote()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$blockquote(..., cite)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-body"></a>}}
+\subsection{Method \code{body()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$body(
+  ...,
+  onafterprint,
+  onbeforeprint,
+  onbeforeunload,
+  onhashchange,
+  onmessage,
+  onoffline,
+  ononline,
+  onpagehide,
+  onpageshow,
+  onpopstate,
+  onredo,
+  onresize,
+  onstorage,
+  onundo,
+  onunload
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-br"></a>}}
+\subsection{Method \code{br()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$br(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-button"></a>}}
+\subsection{Method \code{button()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$button(
+  ...,
+  autofocus,
+  disabled,
+  form,
+  formaction,
+  formenctype,
+  formmethod,
+  formnovalidate,
+  formtarget,
+  name,
+  type,
+  value
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-canvas"></a>}}
+\subsection{Method \code{canvas()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$canvas(..., height, width)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-caption"></a>}}
+\subsection{Method \code{caption()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$caption(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-cite"></a>}}
+\subsection{Method \code{cite()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$cite(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-code"></a>}}
+\subsection{Method \code{code()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$code(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-col"></a>}}
+\subsection{Method \code{col()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$col(..., span)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-colgroup"></a>}}
+\subsection{Method \code{colgroup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$colgroup(..., span)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-command"></a>}}
+\subsection{Method \code{command()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$command(..., checked, disabled, icon, label, radiogroup, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-datalist"></a>}}
+\subsection{Method \code{datalist()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$datalist(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-dd"></a>}}
+\subsection{Method \code{dd()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$dd(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-del"></a>}}
+\subsection{Method \code{del()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$del(..., cite, datetime)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-details"></a>}}
+\subsection{Method \code{details()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$details(..., open)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-dfn"></a>}}
+\subsection{Method \code{dfn()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$dfn(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-dialog"></a>}}
+\subsection{Method \code{dialog()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$dialog(..., open)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-div"></a>}}
+\subsection{Method \code{div()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$div(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-dl"></a>}}
+\subsection{Method \code{dl()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$dl(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-dt"></a>}}
+\subsection{Method \code{dt()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$dt(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-em"></a>}}
+\subsection{Method \code{em()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$em(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-embed"></a>}}
+\subsection{Method \code{embed()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$embed(..., height, src, type, width)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-fieldset"></a>}}
+\subsection{Method \code{fieldset()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$fieldset(..., disabled, form, name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-figcaption"></a>}}
+\subsection{Method \code{figcaption()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$figcaption(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-figure"></a>}}
+\subsection{Method \code{figure()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$figure(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-footer"></a>}}
+\subsection{Method \code{footer()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$footer(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-form"></a>}}
+\subsection{Method \code{form()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$form(
+  ...,
+  accept_charset,
+  action,
+  autocomplete,
+  enctype,
+  method,
+  name,
+  novalidate,
+  target
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-h1"></a>}}
+\subsection{Method \code{h1()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$h1(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-h2"></a>}}
+\subsection{Method \code{h2()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$h2(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-h3"></a>}}
+\subsection{Method \code{h3()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$h3(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-h4"></a>}}
+\subsection{Method \code{h4()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$h4(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-h5"></a>}}
+\subsection{Method \code{h5()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$h5(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-h6"></a>}}
+\subsection{Method \code{h6()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$h6(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-head"></a>}}
+\subsection{Method \code{head()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$head(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-header"></a>}}
+\subsection{Method \code{header()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$header(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-hgroup"></a>}}
+\subsection{Method \code{hgroup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$hgroup(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-hr"></a>}}
+\subsection{Method \code{hr()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$hr(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-html"></a>}}
+\subsection{Method \code{html()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$html(..., manifest, xml..lang, xmlns)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-i"></a>}}
+\subsection{Method \code{i()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$i(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-iframe"></a>}}
+\subsection{Method \code{iframe()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$iframe(..., height, name, sandbox, seamless, src, srcdoc, width)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ilayer"></a>}}
+\subsection{Method \code{ilayer()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$ilayer(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-img"></a>}}
+\subsection{Method \code{img()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$img(..., alt, height, ismap, longdesc, src, usemap, width)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-input"></a>}}
+\subsection{Method \code{input()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$input(
+  ...,
+  accept,
+  alt,
+  autocomplete,
+  autofocus,
+  checked,
+  dirname,
+  disabled,
+  form,
+  formaction,
+  formenctype,
+  formmethod,
+  formnovalidate,
+  formtarget,
+  height,
+  list,
+  max,
+  maxlength,
+  min,
+  multiple,
+  name,
+  pattern,
+  placeholder,
+  readonly,
+  required,
+  size,
+  src,
+  step,
+  type,
+  value,
+  width
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ins"></a>}}
+\subsection{Method \code{ins()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$ins(..., cite, datetime)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-kbd"></a>}}
+\subsection{Method \code{kbd()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$kbd(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-keygen"></a>}}
+\subsection{Method \code{keygen()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$keygen(..., autofocus, challenge, disabled, form, keytype, name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-label"></a>}}
+\subsection{Method \code{label()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$label(..., for., form)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-legend"></a>}}
+\subsection{Method \code{legend()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$legend(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-li"></a>}}
+\subsection{Method \code{li()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$li(..., value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-link"></a>}}
+\subsection{Method \code{link()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$link(..., disabled, href, hreflang, media, rel, sizes, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-main"></a>}}
+\subsection{Method \code{main()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$main(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-map"></a>}}
+\subsection{Method \code{map()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$map(..., name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-mark"></a>}}
+\subsection{Method \code{mark()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$mark(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-marquee"></a>}}
+\subsection{Method \code{marquee()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$marquee(
+  ...,
+  align,
+  behavior,
+  bgcolor,
+  direction,
+  height,
+  hspace,
+  loop,
+  scrollamount,
+  scrolldelay,
+  truespeed,
+  vspace,
+  width
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-menu"></a>}}
+\subsection{Method \code{menu()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$menu(..., label, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-meta"></a>}}
+\subsection{Method \code{meta()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$meta(..., charset, content, http_equiv, name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-meter"></a>}}
+\subsection{Method \code{meter()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$meter(..., form, high, low, max, min, optimum, value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-nav"></a>}}
+\subsection{Method \code{nav()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$nav(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-noscript"></a>}}
+\subsection{Method \code{noscript()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$noscript(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-object"></a>}}
+\subsection{Method \code{object()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$object(
+  ...,
+  archive,
+  codebase,
+  codetype,
+  data,
+  declare,
+  form,
+  height,
+  name,
+  standby,
+  type,
+  usemap,
+  width
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ol"></a>}}
+\subsection{Method \code{ol()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$ol(..., reversed, start, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-optgroup"></a>}}
+\subsection{Method \code{optgroup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$optgroup(..., disabled, label)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-option"></a>}}
+\subsection{Method \code{option()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$option(..., disabled, label, selected, value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-output"></a>}}
+\subsection{Method \code{output()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$output(..., for., form, name)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-p"></a>}}
+\subsection{Method \code{p()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$p(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-param"></a>}}
+\subsection{Method \code{param()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$param(..., name, value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-pre"></a>}}
+\subsection{Method \code{pre()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$pre(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-progress"></a>}}
+\subsection{Method \code{progress()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$progress(..., form, max, value)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-q"></a>}}
+\subsection{Method \code{q()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$q(..., cite)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-rp"></a>}}
+\subsection{Method \code{rp()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$rp(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-rt"></a>}}
+\subsection{Method \code{rt()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$rt(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ruby"></a>}}
+\subsection{Method \code{ruby()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$ruby(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-samp"></a>}}
+\subsection{Method \code{samp()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$samp(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-script"></a>}}
+\subsection{Method \code{script()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$script(..., async, charset, defer, src, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-section"></a>}}
+\subsection{Method \code{section()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$section(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-select"></a>}}
+\subsection{Method \code{select()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$select(
+  ...,
+  autofocus,
+  disabled,
+  form,
+  multiple,
+  name,
+  required,
+  size
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-small"></a>}}
+\subsection{Method \code{small()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$small(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-source"></a>}}
+\subsection{Method \code{source()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$source(..., media, src, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-span"></a>}}
+\subsection{Method \code{span()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$span(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-strong"></a>}}
+\subsection{Method \code{strong()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$strong(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-style"></a>}}
+\subsection{Method \code{style()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$style(..., disabled, media, scoped, type)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-sub"></a>}}
+\subsection{Method \code{sub()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$sub(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-summary"></a>}}
+\subsection{Method \code{summary()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$summary(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-sup"></a>}}
+\subsection{Method \code{sup()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$sup(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-table"></a>}}
+\subsection{Method \code{table()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$table(..., border)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-tbody"></a>}}
+\subsection{Method \code{tbody()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$tbody(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-td"></a>}}
+\subsection{Method \code{td()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$td(..., colspan, headers, rowspan)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-template"></a>}}
+\subsection{Method \code{template()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$template(..., content)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-textarea"></a>}}
+\subsection{Method \code{textarea()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$textarea(
+  ...,
+  autofocus,
+  cols,
+  dirname,
+  disabled,
+  form,
+  label,
+  maxlength,
+  name,
+  placeholder,
+  readonly,
+  required,
+  rows,
+  wrap
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-tfoot"></a>}}
+\subsection{Method \code{tfoot()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$tfoot(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-th"></a>}}
+\subsection{Method \code{th()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$th(..., colspan, headers, rowspan, scope)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-thead"></a>}}
+\subsection{Method \code{thead()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$thead(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-time"></a>}}
+\subsection{Method \code{time()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$time(..., datetime, pubdate)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-title"></a>}}
+\subsection{Method \code{title()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$title(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-tr"></a>}}
+\subsection{Method \code{tr()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$tr(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-track"></a>}}
+\subsection{Method \code{track()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$track(..., default, kind, label, src, srclang)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-tt"></a>}}
+\subsection{Method \code{tt()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$tt(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-ul"></a>}}
+\subsection{Method \code{ul()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$ul(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-var"></a>}}
+\subsection{Method \code{var()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$var(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-video"></a>}}
+\subsection{Method \code{video()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$video(
+  ...,
+  autoplay,
+  controls,
+  height,
+  loop,
+  mediagroup,
+  muted,
+  poster,
+  preload,
+  src,
+  width
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-wbr"></a>}}
+\subsection{Method \code{wbr()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$wbr(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-new"></a>}}
+\subsection{Method \code{new()}}{
+Initialise HTMLElement
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$new(name, ...)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name of node. e.g. "div"}
+
+\item{\code{...}}{Further arguments are attributes and children of this node. See \code{HTMLElement$update()}}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+self
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-update"></a>}}
+\subsection{Method \code{update()}}{
+Updates the attributes and children.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$update(...)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{attributes and children to add to this node}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+self
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-append"></a>}}
+\subsection{Method \code{append()}}{
+Append a child node at the specified position
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$append(..., position = NULL)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{position}}{by default at the end of the list of children nodes
+can be used to set location index}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+self
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-add"></a>}}
+\subsection{Method \code{add()}}{
+Simultaneous create an HTML element and add it as a child node
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$add(name, ...)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{name}}{name of node to create}
+
+\item{\code{...}}{attributes and children of this newly created node}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+In contrast to most other methods, \code{$add()} returns
+the newly created element, \emph{not} the document
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-remove"></a>}}
+\subsection{Method \code{remove()}}{
+Remove child objects at the given indicies
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$remove(indicies)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{indicies}}{indicies of the children to remove}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-as_character_inner"></a>}}
+\subsection{Method \code{as_character_inner()}}{
+Recursively convert this HTMLElement and children to text
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$as_character_inner(..., depth = 0)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{ignored}
+
+\item{\code{depth}}{recursion depth}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+single character string
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-as_character"></a>}}
+\subsection{Method \code{as_character()}}{
+Recursively convert this HTMLElement and children to text
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$as_character(..., depth = 0, include_declaration = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{ignored}
+
+\item{\code{depth}}{recursion depth. default: 0}
+
+\item{\code{include_declaration}}{Include the leading XML declaration? default: FALSE}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+single character string
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-print"></a>}}
+\subsection{Method \code{print()}}{
+Print the SVG string to the terminal
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$print(..., include_declaration = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{...}}{Extra arguments passed to \code{HTMLElement$as_character()}}
+
+\item{\code{include_declaration}}{Include \code{DOCTYPE} declaration? default: FALSE}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-save"></a>}}
+\subsection{Method \code{save()}}{
+Save HTML
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$save(filename, include_declaration = FALSE, ...)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{filename}}{filename}
+
+\item{\code{include_declaration}}{Include \code{DOCTYPE} declaration? default: FALSE}
+
+\item{\code{...}}{Extra arguments passed to \code{HTMLElement$as_character()}}
+}
+\if{html}{\out{</div>}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-copy"></a>}}
+\subsection{Method \code{copy()}}{
+Make a deep copy of this node and its children
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{HTMLElement$copy()}\if{html}{\out{</div>}}
+}
+
+}
+}

@@ -5,11 +5,21 @@
 \alias{parse_html_elem}
 \title{Parse HTML text or file into an HTMLDocument or HTMLElement}
 \usage{
-parse_html_doc(x, encoding = "", ..., as_html = FALSE,
-  options = c("RECOVER", "NOERROR", "NOBLANKS"))
+parse_html_doc(
+  x,
+  encoding = "",
+  ...,
+  as_html = FALSE,
+  options = c("RECOVER", "NOERROR", "NOBLANKS")
+)
 
-parse_html_elem(x, encoding = "", ..., as_html = FALSE,
-  options = c("RECOVER", "NOERROR", "NOBLANKS"))
+parse_html_elem(
+  x,
+  encoding = "",
+  ...,
+  as_html = FALSE,
+  options = c("RECOVER", "NOERROR", "NOBLANKS")
+)
 }
 \arguments{
 \item{x, encoding, ..., as_html, options}{options passed to \code{xml2::read_xml()}}
