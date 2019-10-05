@@ -61,7 +61,7 @@ HTMLDocument <- R6::R6Class(
     },
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    #' @descriptiong View HTML in whatever viewer is available
+    #' @description View HTML in whatever viewer is available
     #' @details only tested in MacOS and Rstudio
     #' @param viewer viewer to use
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

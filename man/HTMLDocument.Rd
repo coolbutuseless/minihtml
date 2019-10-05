@@ -236,6 +236,7 @@ single character string representing the HTML
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-show"></a>}}
 \subsection{Method \code{show()}}{
+View HTML in whatever viewer is available
 \subsection{Usage}{
 \if{html}{\out{<div class="r">}}\preformatted{HTMLDocument$show(viewer = getOption("viewer", utils::browseURL))}\if{html}{\out{</div>}}
 }
