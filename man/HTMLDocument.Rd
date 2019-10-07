@@ -31,125 +31,125 @@ only tested in MacOS and Rstudio
 \if{html}{
 \out{<details ><summary>Inherited methods</summary>}
 \itemize{
-\item \href{../../minihtml/html/HTMLElement.html#method-a}{\code{minihtml::HTMLElement$a()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-abbr}{\code{minihtml::HTMLElement$abbr()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-add}{\code{minihtml::HTMLElement$add()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-address}{\code{minihtml::HTMLElement$address()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-append}{\code{minihtml::HTMLElement$append()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-area}{\code{minihtml::HTMLElement$area()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-article}{\code{minihtml::HTMLElement$article()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-as_character_inner}{\code{minihtml::HTMLElement$as_character_inner()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-aside}{\code{minihtml::HTMLElement$aside()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-audio}{\code{minihtml::HTMLElement$audio()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-b}{\code{minihtml::HTMLElement$b()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-base}{\code{minihtml::HTMLElement$base()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-bdi}{\code{minihtml::HTMLElement$bdi()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-bdo}{\code{minihtml::HTMLElement$bdo()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-big}{\code{minihtml::HTMLElement$big()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-blockquote}{\code{minihtml::HTMLElement$blockquote()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-body}{\code{minihtml::HTMLElement$body()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-br}{\code{minihtml::HTMLElement$br()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-button}{\code{minihtml::HTMLElement$button()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-canvas}{\code{minihtml::HTMLElement$canvas()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-caption}{\code{minihtml::HTMLElement$caption()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-cite}{\code{minihtml::HTMLElement$cite()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-code}{\code{minihtml::HTMLElement$code()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-col}{\code{minihtml::HTMLElement$col()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-colgroup}{\code{minihtml::HTMLElement$colgroup()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-command}{\code{minihtml::HTMLElement$command()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-copy}{\code{minihtml::HTMLElement$copy()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-datalist}{\code{minihtml::HTMLElement$datalist()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-dd}{\code{minihtml::HTMLElement$dd()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-del}{\code{minihtml::HTMLElement$del()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-details}{\code{minihtml::HTMLElement$details()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-dfn}{\code{minihtml::HTMLElement$dfn()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-dialog}{\code{minihtml::HTMLElement$dialog()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-div}{\code{minihtml::HTMLElement$div()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-dl}{\code{minihtml::HTMLElement$dl()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-dt}{\code{minihtml::HTMLElement$dt()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-em}{\code{minihtml::HTMLElement$em()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-embed}{\code{minihtml::HTMLElement$embed()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-fieldset}{\code{minihtml::HTMLElement$fieldset()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-figcaption}{\code{minihtml::HTMLElement$figcaption()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-figure}{\code{minihtml::HTMLElement$figure()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-footer}{\code{minihtml::HTMLElement$footer()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-form}{\code{minihtml::HTMLElement$form()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-h1}{\code{minihtml::HTMLElement$h1()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-h2}{\code{minihtml::HTMLElement$h2()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-h3}{\code{minihtml::HTMLElement$h3()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-h4}{\code{minihtml::HTMLElement$h4()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-h5}{\code{minihtml::HTMLElement$h5()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-h6}{\code{minihtml::HTMLElement$h6()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-head}{\code{minihtml::HTMLElement$head()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-header}{\code{minihtml::HTMLElement$header()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-hgroup}{\code{minihtml::HTMLElement$hgroup()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-hr}{\code{minihtml::HTMLElement$hr()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-html}{\code{minihtml::HTMLElement$html()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-i}{\code{minihtml::HTMLElement$i()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-iframe}{\code{minihtml::HTMLElement$iframe()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-ilayer}{\code{minihtml::HTMLElement$ilayer()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-img}{\code{minihtml::HTMLElement$img()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-input}{\code{minihtml::HTMLElement$input()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-ins}{\code{minihtml::HTMLElement$ins()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-kbd}{\code{minihtml::HTMLElement$kbd()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-keygen}{\code{minihtml::HTMLElement$keygen()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-label}{\code{minihtml::HTMLElement$label()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-legend}{\code{minihtml::HTMLElement$legend()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-li}{\code{minihtml::HTMLElement$li()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-link}{\code{minihtml::HTMLElement$link()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-main}{\code{minihtml::HTMLElement$main()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-map}{\code{minihtml::HTMLElement$map()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-mark}{\code{minihtml::HTMLElement$mark()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-marquee}{\code{minihtml::HTMLElement$marquee()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-menu}{\code{minihtml::HTMLElement$menu()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-meta}{\code{minihtml::HTMLElement$meta()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-meter}{\code{minihtml::HTMLElement$meter()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-nav}{\code{minihtml::HTMLElement$nav()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-noscript}{\code{minihtml::HTMLElement$noscript()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-object}{\code{minihtml::HTMLElement$object()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-ol}{\code{minihtml::HTMLElement$ol()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-optgroup}{\code{minihtml::HTMLElement$optgroup()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-option}{\code{minihtml::HTMLElement$option()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-output}{\code{minihtml::HTMLElement$output()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-p}{\code{minihtml::HTMLElement$p()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-param}{\code{minihtml::HTMLElement$param()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-pre}{\code{minihtml::HTMLElement$pre()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-progress}{\code{minihtml::HTMLElement$progress()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-q}{\code{minihtml::HTMLElement$q()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-remove}{\code{minihtml::HTMLElement$remove()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-rp}{\code{minihtml::HTMLElement$rp()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-rt}{\code{minihtml::HTMLElement$rt()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-ruby}{\code{minihtml::HTMLElement$ruby()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-samp}{\code{minihtml::HTMLElement$samp()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-script}{\code{minihtml::HTMLElement$script()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-section}{\code{minihtml::HTMLElement$section()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-select}{\code{minihtml::HTMLElement$select()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-small}{\code{minihtml::HTMLElement$small()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-source}{\code{minihtml::HTMLElement$source()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-span}{\code{minihtml::HTMLElement$span()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-strong}{\code{minihtml::HTMLElement$strong()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-style}{\code{minihtml::HTMLElement$style()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-sub}{\code{minihtml::HTMLElement$sub()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-summary}{\code{minihtml::HTMLElement$summary()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-sup}{\code{minihtml::HTMLElement$sup()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-table}{\code{minihtml::HTMLElement$table()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-tbody}{\code{minihtml::HTMLElement$tbody()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-td}{\code{minihtml::HTMLElement$td()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-template}{\code{minihtml::HTMLElement$template()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-textarea}{\code{minihtml::HTMLElement$textarea()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-tfoot}{\code{minihtml::HTMLElement$tfoot()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-th}{\code{minihtml::HTMLElement$th()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-thead}{\code{minihtml::HTMLElement$thead()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-time}{\code{minihtml::HTMLElement$time()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-title}{\code{minihtml::HTMLElement$title()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-tr}{\code{minihtml::HTMLElement$tr()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-track}{\code{minihtml::HTMLElement$track()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-tt}{\code{minihtml::HTMLElement$tt()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-ul}{\code{minihtml::HTMLElement$ul()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-update}{\code{minihtml::HTMLElement$update()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-var}{\code{minihtml::HTMLElement$var()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-video}{\code{minihtml::HTMLElement$video()}}
-\item \href{../../minihtml/html/HTMLElement.html#method-wbr}{\code{minihtml::HTMLElement$wbr()}}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="a">}\href{../../minihtml/html/HTMLElement.html#method-a}{\code{minihtml::HTMLElement$a()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="abbr">}\href{../../minihtml/html/HTMLElement.html#method-abbr}{\code{minihtml::HTMLElement$abbr()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="add">}\href{../../minihtml/html/HTMLElement.html#method-add}{\code{minihtml::HTMLElement$add()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="address">}\href{../../minihtml/html/HTMLElement.html#method-address}{\code{minihtml::HTMLElement$address()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="append">}\href{../../minihtml/html/HTMLElement.html#method-append}{\code{minihtml::HTMLElement$append()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="area">}\href{../../minihtml/html/HTMLElement.html#method-area}{\code{minihtml::HTMLElement$area()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="article">}\href{../../minihtml/html/HTMLElement.html#method-article}{\code{minihtml::HTMLElement$article()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="as_character_inner">}\href{../../minihtml/html/HTMLElement.html#method-as_character_inner}{\code{minihtml::HTMLElement$as_character_inner()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="aside">}\href{../../minihtml/html/HTMLElement.html#method-aside}{\code{minihtml::HTMLElement$aside()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="audio">}\href{../../minihtml/html/HTMLElement.html#method-audio}{\code{minihtml::HTMLElement$audio()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="b">}\href{../../minihtml/html/HTMLElement.html#method-b}{\code{minihtml::HTMLElement$b()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="base">}\href{../../minihtml/html/HTMLElement.html#method-base}{\code{minihtml::HTMLElement$base()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="bdi">}\href{../../minihtml/html/HTMLElement.html#method-bdi}{\code{minihtml::HTMLElement$bdi()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="bdo">}\href{../../minihtml/html/HTMLElement.html#method-bdo}{\code{minihtml::HTMLElement$bdo()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="big">}\href{../../minihtml/html/HTMLElement.html#method-big}{\code{minihtml::HTMLElement$big()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="blockquote">}\href{../../minihtml/html/HTMLElement.html#method-blockquote}{\code{minihtml::HTMLElement$blockquote()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="body">}\href{../../minihtml/html/HTMLElement.html#method-body}{\code{minihtml::HTMLElement$body()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="br">}\href{../../minihtml/html/HTMLElement.html#method-br}{\code{minihtml::HTMLElement$br()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="button">}\href{../../minihtml/html/HTMLElement.html#method-button}{\code{minihtml::HTMLElement$button()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="canvas">}\href{../../minihtml/html/HTMLElement.html#method-canvas}{\code{minihtml::HTMLElement$canvas()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="caption">}\href{../../minihtml/html/HTMLElement.html#method-caption}{\code{minihtml::HTMLElement$caption()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="cite">}\href{../../minihtml/html/HTMLElement.html#method-cite}{\code{minihtml::HTMLElement$cite()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="code">}\href{../../minihtml/html/HTMLElement.html#method-code}{\code{minihtml::HTMLElement$code()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="col">}\href{../../minihtml/html/HTMLElement.html#method-col}{\code{minihtml::HTMLElement$col()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="colgroup">}\href{../../minihtml/html/HTMLElement.html#method-colgroup}{\code{minihtml::HTMLElement$colgroup()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="command">}\href{../../minihtml/html/HTMLElement.html#method-command}{\code{minihtml::HTMLElement$command()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="copy">}\href{../../minihtml/html/HTMLElement.html#method-copy}{\code{minihtml::HTMLElement$copy()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="datalist">}\href{../../minihtml/html/HTMLElement.html#method-datalist}{\code{minihtml::HTMLElement$datalist()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="dd">}\href{../../minihtml/html/HTMLElement.html#method-dd}{\code{minihtml::HTMLElement$dd()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="del">}\href{../../minihtml/html/HTMLElement.html#method-del}{\code{minihtml::HTMLElement$del()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="details">}\href{../../minihtml/html/HTMLElement.html#method-details}{\code{minihtml::HTMLElement$details()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="dfn">}\href{../../minihtml/html/HTMLElement.html#method-dfn}{\code{minihtml::HTMLElement$dfn()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="dialog">}\href{../../minihtml/html/HTMLElement.html#method-dialog}{\code{minihtml::HTMLElement$dialog()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="div">}\href{../../minihtml/html/HTMLElement.html#method-div}{\code{minihtml::HTMLElement$div()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="dl">}\href{../../minihtml/html/HTMLElement.html#method-dl}{\code{minihtml::HTMLElement$dl()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="dt">}\href{../../minihtml/html/HTMLElement.html#method-dt}{\code{minihtml::HTMLElement$dt()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="em">}\href{../../minihtml/html/HTMLElement.html#method-em}{\code{minihtml::HTMLElement$em()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="embed">}\href{../../minihtml/html/HTMLElement.html#method-embed}{\code{minihtml::HTMLElement$embed()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="fieldset">}\href{../../minihtml/html/HTMLElement.html#method-fieldset}{\code{minihtml::HTMLElement$fieldset()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="figcaption">}\href{../../minihtml/html/HTMLElement.html#method-figcaption}{\code{minihtml::HTMLElement$figcaption()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="figure">}\href{../../minihtml/html/HTMLElement.html#method-figure}{\code{minihtml::HTMLElement$figure()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="footer">}\href{../../minihtml/html/HTMLElement.html#method-footer}{\code{minihtml::HTMLElement$footer()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="form">}\href{../../minihtml/html/HTMLElement.html#method-form}{\code{minihtml::HTMLElement$form()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="h1">}\href{../../minihtml/html/HTMLElement.html#method-h1}{\code{minihtml::HTMLElement$h1()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="h2">}\href{../../minihtml/html/HTMLElement.html#method-h2}{\code{minihtml::HTMLElement$h2()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="h3">}\href{../../minihtml/html/HTMLElement.html#method-h3}{\code{minihtml::HTMLElement$h3()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="h4">}\href{../../minihtml/html/HTMLElement.html#method-h4}{\code{minihtml::HTMLElement$h4()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="h5">}\href{../../minihtml/html/HTMLElement.html#method-h5}{\code{minihtml::HTMLElement$h5()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="h6">}\href{../../minihtml/html/HTMLElement.html#method-h6}{\code{minihtml::HTMLElement$h6()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="head">}\href{../../minihtml/html/HTMLElement.html#method-head}{\code{minihtml::HTMLElement$head()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="header">}\href{../../minihtml/html/HTMLElement.html#method-header}{\code{minihtml::HTMLElement$header()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="hgroup">}\href{../../minihtml/html/HTMLElement.html#method-hgroup}{\code{minihtml::HTMLElement$hgroup()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="hr">}\href{../../minihtml/html/HTMLElement.html#method-hr}{\code{minihtml::HTMLElement$hr()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="html">}\href{../../minihtml/html/HTMLElement.html#method-html}{\code{minihtml::HTMLElement$html()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="i">}\href{../../minihtml/html/HTMLElement.html#method-i}{\code{minihtml::HTMLElement$i()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="iframe">}\href{../../minihtml/html/HTMLElement.html#method-iframe}{\code{minihtml::HTMLElement$iframe()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="ilayer">}\href{../../minihtml/html/HTMLElement.html#method-ilayer}{\code{minihtml::HTMLElement$ilayer()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="img">}\href{../../minihtml/html/HTMLElement.html#method-img}{\code{minihtml::HTMLElement$img()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="input">}\href{../../minihtml/html/HTMLElement.html#method-input}{\code{minihtml::HTMLElement$input()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="ins">}\href{../../minihtml/html/HTMLElement.html#method-ins}{\code{minihtml::HTMLElement$ins()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="kbd">}\href{../../minihtml/html/HTMLElement.html#method-kbd}{\code{minihtml::HTMLElement$kbd()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="keygen">}\href{../../minihtml/html/HTMLElement.html#method-keygen}{\code{minihtml::HTMLElement$keygen()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="label">}\href{../../minihtml/html/HTMLElement.html#method-label}{\code{minihtml::HTMLElement$label()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="legend">}\href{../../minihtml/html/HTMLElement.html#method-legend}{\code{minihtml::HTMLElement$legend()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="li">}\href{../../minihtml/html/HTMLElement.html#method-li}{\code{minihtml::HTMLElement$li()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="link">}\href{../../minihtml/html/HTMLElement.html#method-link}{\code{minihtml::HTMLElement$link()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="main">}\href{../../minihtml/html/HTMLElement.html#method-main}{\code{minihtml::HTMLElement$main()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="map">}\href{../../minihtml/html/HTMLElement.html#method-map}{\code{minihtml::HTMLElement$map()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="mark">}\href{../../minihtml/html/HTMLElement.html#method-mark}{\code{minihtml::HTMLElement$mark()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="marquee">}\href{../../minihtml/html/HTMLElement.html#method-marquee}{\code{minihtml::HTMLElement$marquee()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="menu">}\href{../../minihtml/html/HTMLElement.html#method-menu}{\code{minihtml::HTMLElement$menu()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="meta">}\href{../../minihtml/html/HTMLElement.html#method-meta}{\code{minihtml::HTMLElement$meta()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="meter">}\href{../../minihtml/html/HTMLElement.html#method-meter}{\code{minihtml::HTMLElement$meter()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="nav">}\href{../../minihtml/html/HTMLElement.html#method-nav}{\code{minihtml::HTMLElement$nav()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="noscript">}\href{../../minihtml/html/HTMLElement.html#method-noscript}{\code{minihtml::HTMLElement$noscript()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="object">}\href{../../minihtml/html/HTMLElement.html#method-object}{\code{minihtml::HTMLElement$object()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="ol">}\href{../../minihtml/html/HTMLElement.html#method-ol}{\code{minihtml::HTMLElement$ol()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="optgroup">}\href{../../minihtml/html/HTMLElement.html#method-optgroup}{\code{minihtml::HTMLElement$optgroup()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="option">}\href{../../minihtml/html/HTMLElement.html#method-option}{\code{minihtml::HTMLElement$option()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="output">}\href{../../minihtml/html/HTMLElement.html#method-output}{\code{minihtml::HTMLElement$output()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="p">}\href{../../minihtml/html/HTMLElement.html#method-p}{\code{minihtml::HTMLElement$p()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="param">}\href{../../minihtml/html/HTMLElement.html#method-param}{\code{minihtml::HTMLElement$param()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="pre">}\href{../../minihtml/html/HTMLElement.html#method-pre}{\code{minihtml::HTMLElement$pre()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="progress">}\href{../../minihtml/html/HTMLElement.html#method-progress}{\code{minihtml::HTMLElement$progress()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="q">}\href{../../minihtml/html/HTMLElement.html#method-q}{\code{minihtml::HTMLElement$q()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="remove">}\href{../../minihtml/html/HTMLElement.html#method-remove}{\code{minihtml::HTMLElement$remove()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="rp">}\href{../../minihtml/html/HTMLElement.html#method-rp}{\code{minihtml::HTMLElement$rp()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="rt">}\href{../../minihtml/html/HTMLElement.html#method-rt}{\code{minihtml::HTMLElement$rt()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="ruby">}\href{../../minihtml/html/HTMLElement.html#method-ruby}{\code{minihtml::HTMLElement$ruby()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="samp">}\href{../../minihtml/html/HTMLElement.html#method-samp}{\code{minihtml::HTMLElement$samp()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="script">}\href{../../minihtml/html/HTMLElement.html#method-script}{\code{minihtml::HTMLElement$script()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="section">}\href{../../minihtml/html/HTMLElement.html#method-section}{\code{minihtml::HTMLElement$section()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="select">}\href{../../minihtml/html/HTMLElement.html#method-select}{\code{minihtml::HTMLElement$select()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="small">}\href{../../minihtml/html/HTMLElement.html#method-small}{\code{minihtml::HTMLElement$small()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="source">}\href{../../minihtml/html/HTMLElement.html#method-source}{\code{minihtml::HTMLElement$source()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="span">}\href{../../minihtml/html/HTMLElement.html#method-span}{\code{minihtml::HTMLElement$span()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="strong">}\href{../../minihtml/html/HTMLElement.html#method-strong}{\code{minihtml::HTMLElement$strong()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="style">}\href{../../minihtml/html/HTMLElement.html#method-style}{\code{minihtml::HTMLElement$style()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="sub">}\href{../../minihtml/html/HTMLElement.html#method-sub}{\code{minihtml::HTMLElement$sub()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="summary">}\href{../../minihtml/html/HTMLElement.html#method-summary}{\code{minihtml::HTMLElement$summary()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="sup">}\href{../../minihtml/html/HTMLElement.html#method-sup}{\code{minihtml::HTMLElement$sup()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="table">}\href{../../minihtml/html/HTMLElement.html#method-table}{\code{minihtml::HTMLElement$table()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="tbody">}\href{../../minihtml/html/HTMLElement.html#method-tbody}{\code{minihtml::HTMLElement$tbody()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="td">}\href{../../minihtml/html/HTMLElement.html#method-td}{\code{minihtml::HTMLElement$td()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="template">}\href{../../minihtml/html/HTMLElement.html#method-template}{\code{minihtml::HTMLElement$template()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="textarea">}\href{../../minihtml/html/HTMLElement.html#method-textarea}{\code{minihtml::HTMLElement$textarea()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="tfoot">}\href{../../minihtml/html/HTMLElement.html#method-tfoot}{\code{minihtml::HTMLElement$tfoot()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="th">}\href{../../minihtml/html/HTMLElement.html#method-th}{\code{minihtml::HTMLElement$th()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="thead">}\href{../../minihtml/html/HTMLElement.html#method-thead}{\code{minihtml::HTMLElement$thead()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="time">}\href{../../minihtml/html/HTMLElement.html#method-time}{\code{minihtml::HTMLElement$time()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="title">}\href{../../minihtml/html/HTMLElement.html#method-title}{\code{minihtml::HTMLElement$title()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="tr">}\href{../../minihtml/html/HTMLElement.html#method-tr}{\code{minihtml::HTMLElement$tr()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="track">}\href{../../minihtml/html/HTMLElement.html#method-track}{\code{minihtml::HTMLElement$track()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="tt">}\href{../../minihtml/html/HTMLElement.html#method-tt}{\code{minihtml::HTMLElement$tt()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="ul">}\href{../../minihtml/html/HTMLElement.html#method-ul}{\code{minihtml::HTMLElement$ul()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="update">}\href{../../minihtml/html/HTMLElement.html#method-update}{\code{minihtml::HTMLElement$update()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="var">}\href{../../minihtml/html/HTMLElement.html#method-var}{\code{minihtml::HTMLElement$var()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="video">}\href{../../minihtml/html/HTMLElement.html#method-video}{\code{minihtml::HTMLElement$video()}}\out{</span>}
+\item \out{<span class="pkg-link" data-pkg="minihtml" data-topic="HTMLElement" data-id="wbr">}\href{../../minihtml/html/HTMLElement.html#method-wbr}{\code{minihtml::HTMLElement$wbr()}}\out{</span>}
 }
 \out{</details>}
 }
