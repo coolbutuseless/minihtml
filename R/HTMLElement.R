@@ -164,7 +164,7 @@ HTMLElement <- R6::R6Class(
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     remove = function(indicies) {
       self$children[indices] <- NULL
-      inviisible(self)
+      invisible(self)
     },
 
 
